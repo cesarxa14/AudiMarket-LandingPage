@@ -191,17 +191,49 @@ input[type=submit]:hover {
 .searchbar button:hover {
 	background: #ccc;
 }
-.imgcont, .playcont {
+.imgcont {
 	height:80px;
 	width: 80px;
 }
-.imgcont img, .playcont img {
+.imgcont img {
 	height:100%;
 	width: 100%;
 }
+.playcont {
+	height:111px;
+}
+.playcont img {
+	display: block;
+	margin: 0 23px;
+	height: 80px;
+	width: 80px;
+}
+#musiclist {
+	overflow-y: auto;
+    max-height: 400px;
+}
 #musiclist li {
 	display: block;
+	background-color: gray;
+    padding: 5px 72px;
+    border: 1px solid gray;
+    border-radius: 30px;
+    margin-bottom: 10px;
+}
+.infocont {
+	min-width: 555px;
+	text-align: left;
 }
 .textCenter{
 	text-align: center;
+}
+.imgcont {
+	vertical-align: super;
+}
+.info {
+	line-height: 37px;
+}
+.heart {
+	color:red;
+	padding: 0px 5px;
 }
