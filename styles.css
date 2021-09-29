@@ -4,7 +4,6 @@ html {
    width: 100%;
 }
 body {
-	background-color:gray;
 	font-family: "Lucida Console";
 	font-weight:18px;
 	background-image: url(img/bg.png);
@@ -56,9 +55,6 @@ ul {
 }
 ul li {
 	display:inline-block;
-	padding-left:3px;
-	padding-right:3px;
-	background-color:rgb(5,0,45);
 }
 li * {
 	display: inline-block;
@@ -68,8 +64,7 @@ ul a {
 	text-decoration: none;
 }
 a:hover {
-    color:black;
-    background-color:lightgray;
+    text-decoration: underline;
 }
 #reg {
 	text-align: center;
@@ -81,7 +76,6 @@ a:hover {
 }
 .standard {
 	width: 100%;
-	height: 50px;
 }
 .big {
 	height:270px;
@@ -172,7 +166,7 @@ input[type=submit]:hover {
 	padding: 6px;
 	margin-top: 8px;
 	font-size: 17px;
-	width: 240px;
+	width: 420px;
 	border: none;
 	margin-right: -3px;
 }
@@ -191,38 +185,47 @@ input[type=submit]:hover {
 .searchbar button:hover {
 	background: #ccc;
 }
+.banner {
+	width: 100%;
+}
+.banner img {
+	width: 100%;
+}
 .imgcont {
-	height:80px;
-	width: 80px;
+	height:225px;
+	width: 225px;
+	float:left;
 }
 .imgcont img {
 	height:100%;
 	width: 100%;
 }
+.space50 {
+	height:50px;
+}
 .playcont {
-	height:111px;
+	float:right;
+	cursor: pointer;
+}
+.playcont:hover {
+	background: gray;
 }
 .playcont img {
 	display: block;
-	margin: 0 23px;
-	height: 80px;
-	width: 80px;
-}
-#musiclist {
-	overflow-y: auto;
-    max-height: 400px;
+	margin: 30px 90px;
+	height: 120px;
+	width: 120px;
 }
 #musiclist li {
-	display: block;
-	background-color: gray;
-    padding: 5px 72px;
-    border: 1px solid gray;
-    border-radius: 30px;
+	background-color: darkgray;
     margin-bottom: 10px;
+    width: 1300px;
 }
 .infocont {
 	min-width: 555px;
 	text-align: left;
+	float: left;
+    margin-left: 50px;
 }
 .textCenter{
 	text-align: center;
@@ -236,4 +239,80 @@ input[type=submit]:hover {
 .heart {
 	color:red;
 	padding: 0px 5px;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #0092b0; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: slategray; 
+}
+.sliding {
+	width: 100%;
+	height:540px;
+	cursor: pointer;
+}
+.slide_button {
+	border: none;
+    display: inline-block;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+    user-select: none;
+    color: #fff!important;
+    background-color: #000!important;
+    font-size: xxx-large;
+}
+.slide_left {
+	position: absolute;
+    top: 64%;
+    left: 0%;
+    transform: translate(0%,-50%);
+    -ms-transform: translate(-0%,-50%);
+}
+.slide_right {
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+	position: absolute;
+    top: 64%;
+    right: 0%;
+    transform: translate(0%,-50%);
+    -ms-transform: translate(0%,-50%);
+}
+.separador {
+	width:50px;
+}
+@media only screen and (max-width: 1293px) {
+	#musiclist {
+		padding-right: 0;
+		padding-left:0;
+	}
+	#musiclist li {
+		width: 100%;
+	}
+	.padRight, .padLeft {
+		padding:0;
+	}
+	#usermenu {
+		padding-right: 0;
+	}
 }
